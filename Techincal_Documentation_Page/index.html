@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HTML Basics Documentation Page</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h1>HTML Basics Documentation</h1></header>
+      <a class="nav-link" href="#HTML_Elements">HTML Elements</a>
+      <a class="nav-link" href="#HTML_Attributes">HTML Attributes</a>
+      <a class="nav-link" href="#HTML_Headings">HTML Headings</a>
+      <a class="nav-link" href="#HTML_Paragraphs">HTML Paragraphs</a>
+      <a class="nav-link" href="#Reference">Reference</a>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="HTML_Elements">
+        <header><h2>HTML Elements</h2></header>
+
+        <h4>What is an HTML Element?</h4>
+        <p>An HTML element is defined by a start tag, some content, and an end tag:</p>
+        <div class="code-container"><pre><code>
+          &lttagname&gt Content goes here... &lt/tagname&gt
+        </code></pre></div>
+        <p>The HTML element is everything from the start tag to the end tag:</p>
+        <div class="code-container"><pre><code>
+          &lth1&gtMy First Heading&lt/h1&gt
+          &ltp&gtMy first paragraph.&lt/p&gt
+        </code></pre></div>
+
+        <h4>Nested HTML Elements</h4>
+        <p>HTML elements can be nested (this means that elements can contain other elements).</p>
+        <p>All HTML documents consist of nested HTML elements.</p>
+        <p>The following example contains four HTML elements (<code>&lthtml&gt</code>, <code>&ltbody&gt</code>, <code>&lth1&gt</code> and <code>&ltp&gt</code>):</p>
+        <div class="code-container"><pre><code>
+          &lt!DOCTYPE html&gt
+          &lthtml&gt
+          &ltbody&gt
+
+          &lth1&gtMy First Heading&lt/h1&gt
+          &ltp&gtMy first paragraph.&lt/p&gt
+
+          &lt/body&gt
+          &lt/html&gt
+        </code></pre></div>
+
+      </section>
+
+      <section class="main-section" id="HTML_Attributes">
+        <header><h2>HTML Attributes</h2></header>
+
+        <p>HTML attributes provide additional information about HTML elements.</p>
+        <ul>
+          <li>All HTML elements can have <strong>attributes</strong></li>
+          <li>Attributes provide <strong>additional information</strong> about elements</li>
+          <li>Attributes are always specified in the <strong>start tag</strong></li>
+          <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+        </ul>
+
+        <h3>The href Attribute</h3>
+        <p>
+          The <code>&lta&gt</code> tag defines a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to:
+        </p>
+        <code>&lta href="https://www.w3schools.com"&gtVisit W3Schools&lt/a&gt</code>
+
+        <h3>The src Attribute</h3>
+        <p>
+          The <code>&ltimg&gt</code> tag is used to embed an image in an HTML page. The <code>src</code> attribute specifies the path to the image to be displayed:
+        </p>
+        <code>&ltimg src="img_girl.jpg"&gt</code>
+        <p>There are two ways to specify the URL in the <code>src</code> attribute:</p>
+        <ol>
+          <li><strong>Absolute URL</strong> - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".</li>
+          <li><strong>Relative URL</strong> - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".</li>
+        </ol>
+        <p>
+          <strong>Notes:</strong> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.
+        </p>
+        <p>
+          <strong>Tip:</strong> It is almost always best to use relative URLs. They will not break if you change domain.
+        </p>
+      </section>
+
+      <section class="main-section" id="HTML_Headings">
+        <header><h2>HTML Headings</h2></header>
+        <p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+        <p>HTML headings are defined with the <code>&lth1&gt</code> to <code>&lth6&gt</code> tags.</p>
+        <p><code>&lth1&gt</code> defines the most important heading. <code>&lth6&gt</code> defines the least important heading.</p>
+
+        <div class="code-container"><pre><code>
+          &lth1&gtHeading 1&lt/h1&gt
+          &lth2&gtHeading 2&lt/h2&gt
+          &lth3&gtHeading 3&lt/h3&gt
+          &lth4&gtHeading 4&lt/h4&gt
+          &lth5&gtHeading 5&lt/h5&gt
+          &lth6&gtHeading 6&lt/h6&gt
+        </code></pre></div>
+
+        <h3>Bigger Headings</h3>
+        <p>Each HTML heading has a default size. However, you can specify the size for any heading with the <code>style</code> attribute, using the CSS <code>font-size</code> property:</p>
+      </section>
+
+      <section class="main-section" id="HTML_Paragraphs">
+        <header><h2>HTML Paragraphs</h2></header>
+        <p>The HTML <code>&ltp&gt</code> element defines a paragraph.</p>
+        <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+
+        <div class="code-container"><pre><code>
+          &ltp&gtThis is a paragraph.&lt/p&gt
+          &ltp&gtThis is another paragraph.&lt/p&gt
+        </code></pre></div>
+
+        <p>You cannot be sure how HTML will be displayed.</p>
+        <p>Large or small screens, and resized windows will create different results.</p>
+        <p>With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+        <p>The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+
+        <div class="code-container"><pre><code>
+          &ltp&gt
+          This paragraph
+          contains         a lot of spaces
+          in the source         code,
+          but the        browser
+          ignores it.
+          &lt/p&gt
+        </code></pre></div>
+
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header><h2>Reference</h2></header>
+        <ul>
+          <li>All the documentation in this page is taken from <a href="https://www.w3schools.com/html/default.asp">W3Schools</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
