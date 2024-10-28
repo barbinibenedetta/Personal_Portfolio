@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  /* COLORS */
+  --background-primary: #2A9D8F;
+  --text-color: #E9C46A;
+  --accent-1: #E76F51;
+  --accent-2: #F4A261;
+  --highlight: #264653;
+  
+  /* FONTS */
+  --font-poppins: 'Poppins', Arial, sans-serif;
+  --font-bungee: 'Bungee', Impact, sans-serif;
+  --font-bungee-shade: 'Bungee Shade', Impact, sans-serif;
+  --font-chewy: 'Chewy', cursive, sans-serif;
+  --font-fredoka: 'Fredoka', Arial, sans-serif;
+  --font-lobster: 'Lobster', cursive, sans-serif;
+  --font-baloo-2: 'Baloo 2', Arial, sans-serif;
+  --font-quicksand: 'Quicksand', Verdana, sans-serif;
+  --font-rubik: 'Rubik', Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--background-primary);
+  background-image: url(https://github.com/barbinibenedetta/Personal_Portfolio/blob/main/Palindrome_Checker/background_image.png?raw=true);
+  color: var(--text-color);
+  margin: 0;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: var(--font-bungee-shade);
+  text-align: center;
+  font-size: clamp(40px, 4vw, 100px);
+  background-color: var(--background-primary);
+  padding: 20px;
+  border-radius: 20px;
+  border: 13px double var(--accent-2);
+  min-width: 760px;
+}
+
+.input-container {
+  background-color: var(--highlight);
+  width: clamp(40rem, 60vw, 100rem);
+  height:  clamp(20rem, 35vh, 40rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0 5px var(--text-color);
+  border: 6px solid #1E3842;
+}
+
+#text-input {
+  background-color: #55B3A6;
+  border: none;
+  color: #1E3842;
+  text-align: center;
+  font-size: clamp(30px, 3vw, 60px);
+  font-family: var(--font-fredoka);
+  font-weight: bold;
+  min-height: 4rem;
+  width: 75%;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px 10px #8BCBC0 inset;
+  padding: 1.5rem;
+}
+
+#text-input:focus {
+  outline: none;
+}
+
+#text-input::placeholder {
+  color: rgba(30, 56, 66, 0.75);
+}
+
+#check-btn {
+  background-color: var(--accent-2);
+  border: 2px solid var(--accent-1);
+  border-radius: 10px;
+  font-family: var(--font-poppins);
+  color: var(--highlight);
+  font-weight: bold;
+  font-size: clamp(2rem, 2vw, 3rem);
+  padding: 0.5rem 1rem;
+}
+
+#check-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.15s ease;
+}
+
+#check-btn:active {
+  color: var(--text-color);
+  background-color: var(--accent-1);
+}
+
+#result {
+  height: 2rem;
+  font-size: 2.5rem;
+  font-family: var(--font-poppins);
+  font-weight: bold;
+}
