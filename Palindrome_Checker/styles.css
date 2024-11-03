@@ -28,7 +28,7 @@ html {
 
 body {
   background-color: var(--background-primary);
-  background-image: url(https://github.com/barbinibenedetta/Personal_Portfolio/blob/main/Palindrome_Checker/background-pattern.png?raw=true);
+  background-image: url(https://raw.githubusercontent.com/barbinibenedetta/Personal_Portfolio/refs/heads/main/Palindrome_Checker/background-pattern.png);
   color: var(--text-color);
   margin: 0;
 }
