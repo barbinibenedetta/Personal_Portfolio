@@ -1,0 +1,68 @@
+* {
+  box-sizing: container-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  font-family: Lato, Verdana;
+  font-size: 3.4rem;
+  word-spacing: 0.6rem;
+  margin-top: 10rem;
+}
+
+#input-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-input {
+  width: 50%;
+  max-width: 600px;
+  font-family: Roboto, Verdana;
+  font-size: 1.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  border: 0.18rem solid black;
+}
+
+#btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: Roboto, Verdana;
+  margin: auto 1rem;
+  font-size: 1rem;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.09rem;
+  box-shadow: 5px 0 10px gray;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  transition: background 0.15s ease;
+}
+
+button:active {
+  transform: translate(5px, 5px);
+  transition: transform 0.15s ease;
+}
+
+#results-div {
+  margin-top: 2.8rem;
+  font-family: Lato, Verdana;
+  font-size: 1.5rem;
+}
