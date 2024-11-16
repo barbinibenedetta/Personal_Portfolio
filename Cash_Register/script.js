@@ -28,6 +28,7 @@ class Register {
         'ONE HUNDRED': 100,
       },
       count: {},
+      change: {},
     };
   }
 
@@ -49,21 +50,31 @@ class Register {
 
   changeInCoins() {
     this.countCoins();
-    this.coins.cid.forEach((coin, index) => {
+    let change = this.change();
+    for (let i = Object.keys(this.coins.value).length - 1; i >= 0; i--) {
+      const coinsInRegisterCount = this.coins.count[this.coins.cid[i][0]];
+      const coinValue = this.coins.value[this.coins.cid[i][0]];
+      const maxNumOfCoins = Math.floor(change / coinValue);
 
-    });
+      if (maxNumOfCoins <= coinsInRegisterCount) {
+        this.coins.change[this.coins.cid[i][0]] = maxNumOfCoins;
+        //probably will have to adjust to avoid float calc errors
+        change = change % coinValue;
+      } else {
+        this.coins.change[this.coins.cid[i][0]] = coinsInRegisterCount;
+        change -= this.coins.cid[i][1];
+      }
+    }
   }
 
   displayChange() {
-    //this will need to be removed and substituted with a call to changeInCoins
-    this.countCoins();
-    for (let i = Object.keys(this.coins.count).length - 1; i >= 0; i--) {
-      //as for now, it display the count of coins in the register, not the actual change.
-      const coinCount = this.coins.count[this.coins.cid[i][0]];
+    this.changeInCoins();
+    for (let i = Object.keys(this.coins.change).length - 1; i >= 0; i--) {
+      const countChangeCoins = this.coins.change[this.coins.cid[i][0]];
       const coinKey = this.coins.cid[i][0];
       const coinValue = this.coins.value[this.coins.cid[i][0]];
-      if (coinCount > 0) {
-        changeContainer.innerHTML += `${coinKey}: $${coinCount * coinValue}<br>`
+      if (countChangeCoins > 0) {
+        changeContainer.innerHTML += `${coinKey}: $${countChangeCoins * coinValue}<br>`
       }
     }
   }
