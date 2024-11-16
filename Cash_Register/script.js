@@ -47,7 +47,7 @@ class Register {
     console.log(this.coins.count);
   }
 
-  changeinCoins() {
+  changeInCoins() {
     this.countCoins();
     this.coins.cid.forEach((coin, index) => {
 
@@ -55,13 +55,17 @@ class Register {
   }
 
   displayChange() {
-    Object.keys(this.coins.count).forEach(coin => {
-      if (this.coins.count[coin] > 0) {
-        changeContainer.innerHTML += `
-
-        `
+    //this will need to be removed and substituted with a call to changeInCoins
+    this.countCoins();
+    for (let i = Object.keys(this.coins.count).length - 1; i >= 0; i--) {
+      //as for now, it display the count of coins in the register, not the actual change.
+      const coinCount = this.coins.count[this.coins.cid[i][0]];
+      const coinKey = this.coins.cid[i][0];
+      const coinValue = this.coins.value[this.coins.cid[i][0]];
+      if (coinCount > 0) {
+        changeContainer.innerHTML += `${coinKey}: $${coinCount * coinValue}<br>`
       }
-    })
+    }
   }
 
   handleEdgeCases() {
