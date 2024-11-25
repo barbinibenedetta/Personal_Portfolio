@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="styles.css" rel="stylesheet">
+    <title>Pokémon SearchApp</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1>Pokémon SearchApp</h1>
+      <div id="search-div">
+        <div>
+          <label id="search-input-label" for="search-input">Enter Pokémon name or ID:</label><br>
+          <input id="search-input" type="text" required></input>
+        </div>
+        
+      <button id="search-button">Search!</button>
+      </div>
+      
+      <div id="pokemon-card">
+        <p id="name-ps-container"><span id="pokemon-name"></span><span>PS <span id="hp"></span></span></p>
+        <div id="sprite-container"></div>
+        <p id="general-info">N. <span id="pokemon-id"></span> Height: <span id="height"></span> Weight: <span id="weight"></span></p>
+        <div id="stats-grid">
+          <div>Attack: <span id="attack"></span></div>
+          <div>Defense: <span id="defense"></span></div>
+          <div>Special Attack: <span id="special-attack"></span></div>
+          <div>Special Defense: <span id="special-defense"></span></div>
+          <div>Speed: <span id="speed"></span></div>
+        </div>
+        <div id="types"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
