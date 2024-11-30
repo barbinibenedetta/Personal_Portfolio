@@ -7,11 +7,6 @@ html, body, main {
   height: 100vh;
 }
 
-main::before {
-  background-image: url(background.jpg);
-  
-}
-
 h1 {
   font-family: var(--title);
   font-size: 4rem;
