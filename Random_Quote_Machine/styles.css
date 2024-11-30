@@ -1,14 +1,42 @@
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+:root {
+  --cookie: 'Cookie', Verdana;
+  --title: 'Playfair Display', sans-serif;
+}
+
+html, body, main {
+  height: 100vh;
+}
+
+main::before {
+  background-image: url(background.jpg);
+  
+}
+
+h1 {
+  font-family: var(--title);
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+#quote-box {
+  height: 24rem;
+}
+
+blockquote {
+  height: 55%;
+  font-family: var(--cookie);
+  margin-bottom: 2rem;
+}
+
+#text {
+  font-size: 3rem;
+}
+
+footer::before {
+  font-size: 1.2rem;
 }
 
 #author {
   display: inline-block;
-}
-
-#text {
-  background-color: blue;
+  font-size: 1.3rem;
 }
