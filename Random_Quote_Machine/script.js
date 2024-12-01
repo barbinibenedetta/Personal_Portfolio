@@ -11,7 +11,7 @@ const fetchData = async () => {
   try {
     const res = await fetch('https://dummyjson.com/quotes/random');
     const data = await res.json();
-    if (res.ok && data.quote.length < 160) {
+    if (res.ok && data.quote.length < 120) {
       quoteText.innerText = data.quote;
       author.innerText = data.author;
 
