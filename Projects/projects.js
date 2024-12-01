@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     id: 4,
-    name: 'Palindrome_Cheker',
+    name: 'Palindrome_Checker',
   },
   {
     id: 5,
