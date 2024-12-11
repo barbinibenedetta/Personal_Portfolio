@@ -265,3 +265,12 @@ a {
 .animated:hover {
   transform: translate(5px, 5px)
 }
+
+/* overriding bootstrap default anchor elment underline and text color */
+.no-default-underline {
+  text-decoration: none !important;
+}
+
+.contacts-container > div > a {
+  color: var(--primary-text) !important;
+}

@@ -10,7 +10,7 @@ const loadProjects = () => {
     const projectNameNoUnderscores = projectName.replaceAll('_', ' ');
 
     projectsSection.innerHTML += `<div class="project-tile">
-            <a href="https://barbinibenedetta.github.io/Personal_Portfolio/Projects/${projectName}/" target="blank">
+            <a href="https://barbinibenedetta.github.io/Personal_Portfolio/Projects/${projectName}/" target="blank" class="no-default-underline">
             <div class="img-container">
               <img src="Projects\\${projectName}\\${projectName}_screen.PNG" alt="${projectNameNoUnderscores} Preview">
             </div>
