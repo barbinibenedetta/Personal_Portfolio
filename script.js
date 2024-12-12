@@ -18,6 +18,12 @@ const loadProjects = () => {
             </a>
           </div>`
   }
+  
+  projectsSection.innerHTML += `
+    <button class="see-more-button btn" onclick="window.location.href='';">
+      See More <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  `;
 }
 
 loadProjects();

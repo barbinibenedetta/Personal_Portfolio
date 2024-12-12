@@ -220,9 +220,36 @@ a {
   color: var(--accent-color);
 }
 
+.see-more-button {
+  grid-column-start: 2;
+  max-width: 20rem;
+  justify-self: center;
+  font-family: var(--body-2);
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px var(--primary-text);
+  background-color: var(--background-primary);
+  color: var(--background-secondary);
+  border-radius: 5px;
+  transition: transform 0.35s ease, background-color 0.1s ease, text-shadow 0.1s ease;
+}
+
+.see-more-button:hover {
+  transform: scale(1.15);
+}
+
+.see-more-button:active {
+  background-color: var(--primary-text);
+  text-shadow: 2px 2px var(--background-primary);
+}
+
 @media (max-width: 1640px) {
   #projects {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .see-more-button {
+    grid-column: 1 / -1;
   }
 }
 
