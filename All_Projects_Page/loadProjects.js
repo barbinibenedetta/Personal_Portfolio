@@ -5,6 +5,7 @@ const projectContainer = document.getElementById('project-container');
 const loadMoreBtn = document.getElementById('load-more-btn');
 const selectLanguage = document.getElementById('language');
 const selectOrder = document.getElementById('order');
+const resetBtn = document.getElementById('reset-btn');
 
 let currentProjectId;
 let currentArray = [...projects];
@@ -50,7 +51,6 @@ selectLanguage.addEventListener('change', () => {
   currentArray = handleAllFilters();
 
   projectContainer.innerHTML = '';
-
   loadProjects(currentArray.length, currentArray);
 });
 
@@ -58,6 +58,12 @@ selectOrder.addEventListener('change', () => {
   currentArray = handleAllFilters();
 
   projectContainer.innerHTML = '';
-
   loadProjects(currentArray.length, currentArray);
 });
+
+resetBtn.addEventListener('click', () => {
+  projectContainer.innerHTML = '';
+  loadProjects(projects.length, projects);
+  selectLanguage.value = 'all';
+  selectOrder.value = 'newest';
+})
