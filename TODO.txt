@@ -1,0 +1,17 @@
+#TODO
+
+## polishing
+  - []  finish styling of nav bar in all projects page
+  - []  make sure that nav bar elements behave properly at different 
+        screen sizes
+
+## features
+  - []  add and display the tags of the projects in the page
+          - []  create tags as button elements
+                  - []  will probably need to make a different file with an object that 
+                        collects all the info and the styiling
+          - []  style the tags with colors and icons related to the language/techn
+          - []  display on the right side of the projects its tags
+          - []  make sure the tags move and display properly at different screen sizes
+          - []  clicking on a button tag changes the language filter to said tag and updates
+                the page
