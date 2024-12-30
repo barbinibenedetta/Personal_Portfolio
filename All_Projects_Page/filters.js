@@ -3,7 +3,7 @@ import { projects } from "../Projects/projects.js";
 const selectLanguage = document.getElementById('language');
 const selectOrder = document.getElementById('order');
 
-export const languageFilter = () => {
+const languageFilter = () => {
   if (selectLanguage.value === 'all') {
     return projects
   }
@@ -15,12 +15,16 @@ export const languageFilter = () => {
   return filteredArr;
 }
 
-export const sortingOrder = (arr) => {
+const sortingOrder = (arr) => {
   switch(selectOrder.value) {
     case 'oldest':
       return arr.slice().reverse();
     case 'newest':
       return arr;
+    case 'alphabet':
+      return [...arr].sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())).reverse();
+    case 'reversed-alphabet':
+      return [...arr].sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
   }
 }
 
