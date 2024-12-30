@@ -16,3 +16,4 @@
       - []  clicking on a button tag changes the language filter to said tag and updates
                   the page
   - []  add another sorting method, based on the length of each project
+!!- [] add links from the all projects page to the actual projects
