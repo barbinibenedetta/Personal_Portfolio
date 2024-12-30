@@ -1,9 +1,10 @@
 import { projects } from "../Projects/projects.js";
-import { languageFilter } from "./filters.js";
+import { handleAllFilters } from "./filters.js";
 
 const projectContainer = document.getElementById('project-container');
 const loadMoreBtn = document.getElementById('load-more-btn');
-const select = document.getElementById('language');
+const selectLanguage = document.getElementById('language');
+const selectOrder = document.getElementById('order');
 
 let currentProjectId;
 let currentArray = [...projects];
@@ -45,8 +46,16 @@ loadMoreBtn.addEventListener('click', () => {
   }
 });
 
-select.addEventListener('change', () => {
-  currentArray = languageFilter();
+selectLanguage.addEventListener('change', () => {
+  currentArray = handleAllFilters();
+
+  projectContainer.innerHTML = '';
+
+  loadProjects(currentArray.length, currentArray);
+});
+
+selectOrder.addEventListener('change', () => {
+  currentArray = handleAllFilters();
 
   projectContainer.innerHTML = '';
 
