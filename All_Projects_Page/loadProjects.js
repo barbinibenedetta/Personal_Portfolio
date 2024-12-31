@@ -20,10 +20,14 @@ const loadProjects = (num, arr) => {
     projectContainer.innerHTML += `
       <div id="row-div" class="row">
         <div class="col image-container">
-          <img src="${imgSrc}" alt="${projectName} Preview">
+          <a href="https://barbinibenedetta.github.io/Personal_Portfolio/Projects/${arr[i].name}/" target="_blank">
+            <img src="${imgSrc}" alt="${projectName} Preview">
+          </a>
         </div>
         <div class="col-6 description-container d-none d-md-block">
-          <h3>${projectName}</h3>
+          <a href="https://barbinibenedetta.github.io/Personal_Portfolio/Projects/${arr[i].name}/" target="_blank">
+            <h3>${projectName}</h3>
+          </a>
           <p>${arr[i].description}</p>
         </div>
         <div class="col tags-container"></div>

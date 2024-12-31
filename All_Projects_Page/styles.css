@@ -72,7 +72,7 @@ select {
   justify-content: center;
 }
 
-.image-container > img {
+.image-container img {
   max-height: 30vh;
   max-width: 30vh;
 }
@@ -113,4 +113,12 @@ hr {
   background-color: var(--background-primary);
   color: var(--button-color);
   border: 2px solid var(--button-color);
+}
+
+a {
+  color:rgba(17, 5, 1, 0.89)
+}
+
+a:hover {
+  color:rgba(17, 5, 1, 0.89)
 }
